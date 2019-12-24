@@ -17,6 +17,7 @@ import xlrd
 # print(sheet1.cell_value(1, 0))
 # print(sheet1.row(1)[0].value)
 
+
 def readexcel(path):
     testcase = xlrd.open_workbook(path)
     sh = testcase.sheet_by_index(0)
@@ -25,5 +26,6 @@ def readexcel(path):
         caselist.append(sh.cell(fx,1).value)
     return  caselist
 
+
 if __name__ == "__main__":
-    readexcel('testcase.xlsx')
+    readexcel("testcase.xlsx")
